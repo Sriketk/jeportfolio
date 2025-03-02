@@ -65,34 +65,32 @@ export function FocusCards({ cards }: { cards: Card[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full mt-20">
       {cards.map((card, index) => (
-        <>
-          <Dialog>
-            <DialogTrigger asChild>
-              <button>
-                <Card
-                  key={card.title}
-                  card={card}
-                  index={index}
-                  hovered={hovered}
-                  setHovered={setHovered}
+        <Dialog key={card.title}>
+          <DialogTrigger asChild>
+            <button>
+              <Card
+                key={card.title}
+                card={card}
+                index={index}
+                hovered={hovered}
+                setHovered={setHovered}
+              />
+            </button>
+          </DialogTrigger>
+          <DialogContent className="h-auto ">
+            <DialogHeader>
+              <DialogTitle>{card.title}</DialogTitle>
+              <DialogDescription>
+                <Image
+                  src={card.src}
+                  alt={card.title}
+                  height={10000}
+                  width={10000}
                 />
-              </button>
-            </DialogTrigger>
-            <DialogContent className="h-auto ">
-              <DialogHeader>
-                <DialogTitle>{card.title}</DialogTitle>
-                <DialogDescription>
-                  <Image
-                    src={card.src}
-                    alt={card.title}
-                    height={10000}
-                    width={10000}
-                  />
-                </DialogDescription>
-              </DialogHeader>
-            </DialogContent>
-          </Dialog>
-        </>
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
       ))}
     </div>
   );
