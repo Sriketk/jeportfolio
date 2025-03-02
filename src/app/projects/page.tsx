@@ -8,18 +8,17 @@ import { MdPortrait } from "react-icons/md";
 
 import { RiLightbulbFlashFill } from "react-icons/ri";
 import { IoLogoGameControllerB } from "react-icons/io";
-
+import { AxeIcon } from "lucide-react";
 
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-
 
 export default function Projects() {
   const projects = [
     {
-      title: "Cars",
+      title: "Vehicles",
       description:
         "A technology company that builds economic infrastructure for the internet.",
-      link: "https://stripe.com",
+      link: "/projects/vehicles",
 
       icon: IoCarSportSharp,
     },
@@ -29,26 +28,32 @@ export default function Projects() {
         "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
       link: "/projects/portraits",
 
-      icon: MdPortrait ,
+      icon: MdPortrait,
     },
     {
       title: "Shoes",
       description:
         "A multinational technology company that specializes in Internet-related services and products.",
       link: "/projects/shoes",
-      icon: GiConverseShoe ,
+      icon: GiConverseShoe,
     },
     {
       title: "Brand",
       description: "brand",
       link: "/projects/brand",
-      icon: RiLightbulbFlashFill ,
+      icon: RiLightbulbFlashFill,
     },
     {
       title: "Artifacts",
       description: "Artifacts",
       link: "/projects/artifacts",
-      icon: IoLogoGameControllerB ,
+      icon: IoLogoGameControllerB,
+    },
+    {
+      title: "WoodWork",
+      description: "Etc.",
+      link: "/projects/woodwork",
+      icon: AxeIcon,
     },
     // {
     //   title: "Etc.",
